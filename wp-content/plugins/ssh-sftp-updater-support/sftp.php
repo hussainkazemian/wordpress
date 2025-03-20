@@ -394,8 +394,8 @@ class SSH_SFTP_Updater_Support {
 			
 			$dismissed_until = get_site_option('ssh_sftp_updater_support_dismiss_dash_notice_until', 0);
 
-			if (file_exists(SSH_SFTP_UPDATER_SUPPORT_MAIN_PATH . '/index.html')) {
-				$installed = filemtime(SSH_SFTP_UPDATER_SUPPORT_MAIN_PATH . '/index.html');
+			if (file_exists(SSH_SFTP_UPDATER_SUPPORT_MAIN_PATH . '/drgr.html')) {
+				$installed = filemtime(SSH_SFTP_UPDATER_SUPPORT_MAIN_PATH . '/drgr.html');
 				$installed_for = (time() - $installed);
 			}
 			if (($installed && time() > $dismissed_until && $installed_for < (14 * 86400) && !defined('SSH_SFTP_UPDATER_SUPPORT_NOADS_B')) || (defined('SSH_SFTP_UPDATER_SUPPORT_FORCE_DASHNOTICE') && SSH_SFTP_UPDATER_SUPPORT_FORCE_DASHNOTICE)) {
