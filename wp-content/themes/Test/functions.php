@@ -6,7 +6,7 @@ function theme_setup(): void {
     add_theme_support( 'custom-logo', array(
         'height'      => 100,
         'width'       => 200,
-        'flex-height' => true,
+        'flex-he§ight' => true,
     ) );
 
     // Set the default Post Thumbnail size
