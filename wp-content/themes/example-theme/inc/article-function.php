@@ -1,18 +1,17 @@
 <?php
-function generate_article($products): void
-{
-    if ($products->have_posts()) :
-        while ($products->have_posts()) :
+function generate_article( $products ): void {
+    if ( $products->have_posts() ) :
+        while ( $products->have_posts() ) :
             $products->the_post();
             ?>
             <article class="product">
                 <?php
                 the_post_thumbnail();
-                the_title('<h3>', '</h3>');
+                the_title( '<h3>', '</h3>' );
                 $excerpt = get_the_excerpt();
                 ?>
                 <p>
-                    <?php echo substr($excerpt, 0, 80); ?>...
+                    <?php echo substr( $excerpt, 0, 80 ); ?>...
                 </p>
                 <a href="<?php echo get_permalink(); ?>">Read More</a>
             </article>
